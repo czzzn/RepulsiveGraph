@@ -10,6 +10,9 @@ def main():
     # Create repulsive graph
     rep_creator = RepulsiveGraphCreator(data)
     repulsive_edge_index = rep_creator.create_repulsive_graph()
+
+    # Visualize the repulsive graph
+    visualize_graph(repulsive_edge_index, data.y, "Repulsive Graph Visualization")
     
     # Initialize model
     model = GCN(dataset, repulsive_edge_index)
